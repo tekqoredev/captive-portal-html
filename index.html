@@ -16,21 +16,33 @@
     -->
     <link rel="manifest" href="/manifest.json" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
     <title>Captive Portal</title>
   </head>
+  <style>
+    .font-hubballi {
+      font-family:  'Hubballi', cursive;
+    }
+  </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root" class="min-vw-100 min-vh-100 bg-info bg-opacity-25 container-fluid d-flex flex-column justify-content-center align-items-center">
-      <div class="p-2 rounded d-flex flex-column justify-content-end align-items-start bg-light bg-opacity-50" style="width: 300px; height: 300px;">
+    <div id="root" class="font-hubballi min-vw-100 min-vh-100 bg-info bg-opacity-25 container-fluid d-flex flex-column justify-content-center align-items-center">
+      <form
+        class="p-2 rounded d-flex flex-column justify-content-end align-items-start bg-light bg-opacity-50" style="width: 300px; height: 300px;"
+        onsubmit="login()"
+      >
       <img alt="Logo here" class="bg-secondary bg-opacity-10 mx-auto mb-4" src="https://captive-portal-html-imtg.vercel.app/tekqore.jpg" style="height: 75px; width: 250px"/>
-      <label class="d-block">Your Name</label>
+      <label class="d-block">User Name</label>
       <input class="d-block border border-secondary border-opacity-50 rounded w-100" type="text" />
-      <label class="d-block">Your Name</label>
+      <label class="d-block">Mobile Number</label>
       <input class="d-block border border-secondary border-opacity-50 rounded w-100" type="text" />
-      <button class="d-block m-4 rounded bg-info text-white fw-bold border border-secondary border-opacity-50 mx-auto">
+      <button 
+        class="d-block m-4 rounded bg-info text-white fw-bold border border-secondary border-opacity-50 mx-auto"
+        onclick="login()"
+      >
         Login
       </button>
-      </div>
+      </form>
     </div>
     <!--
       This HTML file is a template.
@@ -42,6 +54,11 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+    function login() { 
+      alert("Form submitted. Processing data please wait ...");
+    }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
